@@ -1,9 +1,13 @@
 import React from 'react'
 import Collection from '../common/collection';
 import Filters from '../common/filters';
-import FilterItem from '../common/filters/filteritem';
-import "./diningout.css";
 
+import { dining } from "../../data/dining";
+import "./diningout.css";
+import ExploreSection from '../common/exploreSection';
+
+
+const diningList = dining;
 
 const diningFilters = [
   {
@@ -114,7 +118,10 @@ const DiningOut = () => {
       <div className="max-width">
         <Filters filterList={diningFilters} />
       </div>
-     
+      <ExploreSection
+        list={diningList}
+        collectionsName="Dine-Out Restaurants in Bangalore"
+      />
     </div>
   );
 }
